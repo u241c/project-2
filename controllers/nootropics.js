@@ -34,7 +34,7 @@ function update(req, res)  {
       if (err) {
       } else {
         // res.send(updateModel);
-        res.redirect("/nootropics");  
+        res.redirect(`/nootropics/${req.params.id}`);  
       }})}
     module.exports = {
         new: newNootropic,

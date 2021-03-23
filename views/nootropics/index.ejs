@@ -3,17 +3,21 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
   <title></title>
 </head>
 
 <body>
-  <h1>Nootropics index page</h1>
+  <h1>Nootropics Index Page</h1>
+  <!-- <div style = "position:relative; top:100px;"> -->
   <% nootropics.forEach((n) => {%>
     <p>Name: <%=n.name%></p>
     <p>Category: <%=n.category%></p>
-    <a href="/nootropics/new/">DETAILS</a>
+    <a href="/nootropics/new/">DELETE</a>
   <%}); %>
-
+  
 </body>
 
 </html>

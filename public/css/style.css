@@ -1,0 +1,27 @@
+/* .delete-form {
+    display: inline-block;
+    margin-right: 10px;
+   }
+   
+   .delete-form button {
+    color: red;
+   }
+   
+   li {
+    list-style: none;
+    margin-bottom: 10px;
+   } */
+
+   body {
+       background-color: yellow;
+       /* background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg");
+       background-repeat: no-repeat;
+       background-size: cover;
+       opacity: 0.5; */
+    
+   }
+
+   h1{
+       text-align: center;
+       font-family: 'Ranchers', cursive;
+   }
