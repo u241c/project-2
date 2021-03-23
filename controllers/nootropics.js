@@ -1,4 +1,4 @@
-const Nootropic = require('..//models/nootropic');
+const Nootropic = require('../models/nootropic');
 
 
 function newNootropic(req, res){
@@ -6,11 +6,7 @@ function newNootropic(req, res){
 
 }
 function create(req, res){
-    for (let key in req.body) {
-        if (req.body[key] === "") delete req.body[key];
-      }
-    // console.log(req.body);
-    Nootropic.create(req.body, function(err, nootropic){
+     Nootropic.create(req.body, function(err, nootropic){
         console.log(nootropic);
         res.redirect('/');
     });
@@ -25,7 +21,7 @@ function index(req, res){
     // res.send('deleting...')
   function deleteNootropic(req, res){    
     Nootropic.findByIdAndRemove(req.params.id, (err, data) => {
-       res.render("/nootropics");
+       res.redirect("/nootropics");
      });
     }
    // res.send(req.body)
