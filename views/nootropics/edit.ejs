@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="/css/style.css">
-        <title></title>
-    </head>
-    <body>
-        <h1>Edit Nootropic Page</h1>
-        <form action="/nootropics/<%=nootropics._id%>?_method=PUT" method="POST">
-    		<!--  NOTE: the form is pre-populated with values for the server-->
-    		Name: <input type="text" name="name" value="<%=nootropics.name%>"/><br/>
-    		Category: <input type="text" name="update" value="<%=nootropics.name%>"/><br/>
-    	
-            <br/>
-            <input type="submit" name="" value="Submit Changes"/>
-        </form>
-    </body>
+<html lang="en">
+  
+  <body>
+    
+    <div class="container">
+      <h1>All Nootropics</h1>
+      <a href="/">Go Back Home</a>
+      <a href="/nootropics/new">Add a new nootropic</a>
+      <ol>
+        <% nootropics.forEach(function(nootropic) { %>
+        <li>
+          <a href="/nootropics/nootropic/<%= nootropic._id %>">
+            <%= nootropic.name %> Description: <%= nootropic.description %>
+          </a>
+        </li>
+        <% }); %>
+      </ol>
+    </div>
+    
+  </body>
 </html>

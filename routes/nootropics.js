@@ -4,7 +4,7 @@ const nootropicsCtrl = require('../controllers/nootropics');
 
 router.get('/', nootropicsCtrl.index);
 router.get('/new', nootropicsCtrl.new);
-// router.get('/:id', nootropicsCtrl.show);
+
 router.post('/', nootropicsCtrl.create);
 router.delete('/:id', nootropicsCtrl.delete);
 router.get('/edit', nootropicsCtrl.edit);
