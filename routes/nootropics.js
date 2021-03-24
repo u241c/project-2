@@ -7,8 +7,8 @@ router.get('/new', nootropicsCtrl.new);
 // router.get('/:id', nootropicsCtrl.show);
 router.post('/', nootropicsCtrl.create);
 router.delete('/:id', nootropicsCtrl.delete);
-// router.post('/', nootropicsCtrl.create);
-router.post('/', nootropicsCtrl.update);
+router.get('/edit', nootropicsCtrl.edit);
+router.put('/:id', nootropicsCtrl.update);
 
 
 

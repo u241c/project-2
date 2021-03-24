@@ -7,16 +7,11 @@
     </head>
     <body>
         <h1>Edit Nootropic Page</h1>
-        <form action="/nootropics/<%=nootropic.id%>?_method=PUT" method="POST">
+        <form action="/nootropics/<%=nootropics._id%>?_method=PUT" method="POST">
     		<!--  NOTE: the form is pre-populated with values for the server-->
-    		Name: <input type="text" name="name" value="<%=nootropic.name%>"/><br/>
-    		Category: <input type="text" name="color" value="<%=nootropic.color%>"/><br/>
-    		Is Ready To Eat:
-            <input type="checkbox" name="readyToEat"
-                <% if(nootropic.readyToEat === true){ %>
-                    checked
-                <% } %>
-            />
+    		Name: <input type="text" name="name" value="<%=nootropics.name%>"/><br/>
+    		Category: <input type="text" name="update" value="<%=nootropics.name%>"/><br/>
+    	
             <br/>
             <input type="submit" name="" value="Submit Changes"/>
         </form>

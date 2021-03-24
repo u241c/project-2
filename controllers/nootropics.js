@@ -20,19 +20,28 @@ function index(req, res){
 //  router.delete("/:id", (req, res) => {
     // res.send('deleting...')
   function deleteNootropic(req, res){    
-    Nootropic.findByIdAndRemove(req.params.id, (err, data) => {
+    Nootropic.findByIdAndDelete(req.params.id, (err, data) => {
        res.redirect("/nootropics");
      });
     }
+    function edit(req, res) {
+      // const nootropic = Nootropic.getOne(req.params.id);
+      res.render("nootropics/edit")
+      // , { 
+      //   // nootropic, 
+      //   // nootropicId: req.params.id,
+      // });
+    }  
+
    // res.send(req.body)
-function update(req, res)  { 
-   Nootropic.findByIdAndUpdate(
+ function update(req, res)  { 
+    Nootropic.findByIdAndUpdate(
     req.params.id,
     req.body,
     { new: true },
     (err, updateModel) => {
       if (err) {
-      } else {
+       } else {
         // res.send(updateModel);
         res.redirect(`/nootropics/${req.params.id}`);  
       }})}
@@ -41,5 +50,6 @@ function update(req, res)  {
         create,
         index, 
         delete: deleteNootropic,
+        edit,
         update
 }
