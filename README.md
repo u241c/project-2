@@ -21,7 +21,7 @@ A simple app that performes CRUD, Named Nootropics. Why am I building this app? 
 
 ## Getting started
 
-[Click](#) here to get started and see the app online!
+[Click](https://nootropics-app.herokuapp.com/nootropics/new/) here to get started and see the app online!
 
 
 ## Future Enhancements
