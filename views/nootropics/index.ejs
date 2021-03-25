@@ -12,17 +12,29 @@
 <body>
   <h1>Nootropics Index Page</h1>
   <!-- <div style = "position:relative; top:100px;"> -->
+    
   <% nootropics.forEach((n) => {%>
 
     <p>Name: <%=n.name%></p>
     <p>Category: <%=n.category%></p>
-    <a href="/nootropics/edit/">Update</a>
+    
+    <form action="/nootropics/<%=n._id%>?_method=PUT" method="POST">
+      <input type="text" name="name" /> 
+      <input type="submit" value="EDIT" />
+      </form>
+   
     <form action="/nootropics/<%=n._id%>?_method=DELETE" method="POST">
       <input type="submit" value="DELETE" />
       </form>
+      
+      <!-- <form action="/nootropics/<%=n._id%>?_method=PUT" method="POST">
+        <input type="text" name="category" /> 
+        <input type="submit" value="EDIT" />
+        </form> -->
     
     <%}); %>
     <a href="/nootropics/new/">Nootropics Category</a>
+    
 </body>
 
 </html>

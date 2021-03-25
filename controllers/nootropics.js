@@ -36,21 +36,24 @@ function index(req, res){
           res.render('nootropics/edit', { nootropic });
       })
   }
+  function update(req, res){
+    Nootropic.update(req.body, function(err, nootropic){
+       console.log(nootropic);
+       res.redirect('/');
+   });
+}
     
-     
-
-   // res.send(req.body)
- function update(req, res)  { 
-    Nootropic.findByIdAndUpdate(
-    req.params.id,
-    req.body,
-    { new: true },
-    (err, updateModel) => {
-      if (err) {
-       } else {
-        // res.send(updateModel);
-        res.redirect(`/nootropics/${req.params.id}`);  
-      }})}
+  // function update(req, res)  { 
+  //   Nootropic.findByIdAndUpdate(
+  //   req.params.id,
+  //   req.body,
+  //   { new: true },
+  //   (err, updateModel) => {
+  //     if (err) {
+  //      } else {
+  //       // res.send(updateModel);
+  //       res.redirect(`/nootropics/${req.params.id}`);  
+      // }})}
     module.exports = {
         new: newNootropic,
         create,

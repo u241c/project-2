@@ -10,7 +10,7 @@
       <ol>
         <% nootropics.forEach(function(nootropic) { %>
         <li>
-          <a href="/nootropics/nootropic/<%= nootropic._id %>">
+          <a href="/nootropics<%= nootropic._id %>">
             <%= nootropic.name %> Description: <%= nootropic.description %>
           </a>
         </li>

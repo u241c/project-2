@@ -10,12 +10,20 @@
 <body>
   <h1>New Nootropics Page</h1>
   
-  <form action="/nootropics" method="POST">
+  <form id="nootropics-form" action="/nootropics" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" /> 
     
-    Name: <input type="text" name="name" /><br />
-    Category: <input type="text" name="category" /><br />
-   <input type="submit" value="Create Nootropics" />
-   <a href="/nootropics/">Details</a>
+    <label for="category">Category:</label>
+    <input type="text" name="category" /> 
+    <div id="sub-btn"> 
+      <input type="submit" value="Create Nootropics" />
+   </div>
+   
+   <div class="videoWrapper">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/4TLppsfzQH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </div>
+
   </form>
   
     
