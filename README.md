@@ -5,6 +5,7 @@ A simple app that performes CRUD, Named Nootropics. Why am I building this app? 
 ## Technologies Used
 
 - CSS3
+- HTML
 - JS
 - Mongoose
 - Mongodb
